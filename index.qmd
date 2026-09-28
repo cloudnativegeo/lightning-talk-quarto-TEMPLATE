@@ -13,7 +13,7 @@ format:
     controls: false
     hash: true
     logo: images/cng-logo.svg
-width: 1600
+    width: 1600
     height: 900
     chalkboard: false
 title-slide-attributes:
