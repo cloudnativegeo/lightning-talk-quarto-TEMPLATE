@@ -49,9 +49,11 @@ This template uses the [Cloud Native Geospatial Forum](https://cloudnativegeo.or
 
 - **Background:** `#1D232B` (dark charcoal)
 - **Text:** `#F2F4F6` (Soft White)
-- **Accent:** `#2126F7` (Bonus Blue)
+- **Accent:** `#2126F7` (Bonus Blue) — decorative only on these dark slides; it's too low-contrast for text on `#1D232B`
 - **Highlight:** `#FFD626` (Sunshine Yellow)
 - **Heading/body font:** [iA Writer Quattro S](https://github.com/iaolo/iA-Fonts) (open source)
-- **Code font:** [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
+- **Code font:** Berkeley Mono (licensed; loaded from the Radiant Earth font CDN, never committed here)
+
+Both fonts load from `https://assets.radiant.earth/fonts/`. Use sentence case and no emoji in slide text.
 
 Brand colors and styling are defined in `custom.scss`.
