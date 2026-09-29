@@ -17,15 +17,18 @@ A [Quarto RevealJS](https://quarto.org/docs/presentations/revealjs/) template fo
 3. Enable GitHub Pages:
   - Go to **Settings → Pages** in your new repo
   - Under **Source**, select **Deploy from a branch**
-  - Under **Branch**, select **`gh-pages`** and **`/ (root)`**, then click **Save**
+  - Under **Branch**, select `gh-pages` and `/ (root)`, then click **Save**
   - Your deck will be live at `https://<your-username>.github.io/<repo-name>/` after a minute or two
     - You can display this URL on the main page by clicking the gear icon in the **About** section, and checking the **Use your GitHub Pages website** checkbox.
     - [ ] Share this URL with the CNG event organizers
+
+
 
 ## What to edit
 
 - The main file to edit is the `index.qmd` file which defines the content of the slides.
 - Push any changes to `main` either using the GitHub.com website or by editing content locally (see below) — the workflow in `.github/workflows/publish.yml` will rerender the slides, push the resulting website to a `gh-pages` branch, and update the website automatically!
+
 
 
 ## Local Setup / Development
@@ -39,21 +42,7 @@ uv sync
 uv run quarto preview
 ```
 
-Open the preview URL in your browser. The deck auto-advances — to turn off auto-advance during editing, append `?autoSlide=0` to the URL (e.g. `http://localhost:4200/?autoSlide=0`).
+Open the preview URL in your browser. The deck auto-advances — to turn off auto-advance during editing, add `?autoSlide=0` right after the `/`, **before** the `#` (e.g. `http://localhost:4200/?autoSlide=0#/slide-05`). Anything after the `#` is ignored, so `http://localhost:4200/#/slide-05?autoSlide=0` will not work. The countdown bar is hidden while auto-advance is off.
 
 ---
 
-## Brand
-
-This template uses the [Cloud Native Geospatial Forum](https://cloudnativegeo.org) brand:
-
-- **Background:** `#1D232B` (dark charcoal)
-- **Text:** `#F2F4F6` (Soft White)
-- **Accent:** `#2126F7` (Bonus Blue) — decorative only on these dark slides; it's too low-contrast for text on `#1D232B`
-- **Highlight:** `#FFD626` (Sunshine Yellow)
-- **Heading/body font:** [iA Writer Quattro S](https://github.com/iaolo/iA-Fonts) (open source)
-- **Code font:** Berkeley Mono (licensed; loaded from the Radiant Earth font CDN, never committed here)
-
-Both fonts load from `https://assets.radiant.earth/fonts/`. Use sentence case and no emoji in slide text.
-
-Brand colors and styling are defined in `custom.scss`.

@@ -676,12 +676,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var ts = document.getElementById('title-slide');
   if (ts) ts.id = 'slide-title';
 
-  // Countdown bar: sits above the RevealJS progress bar, runs right-to-left per slide
-  var cdBar = document.createElement('div');
-  cdBar.id = 'slide-countdown';
-  cdBar.innerHTML = '<div id="slide-countdown-fill"></div>';
-  document.querySelector('.reveal').appendChild(cdBar);
-
+  // Countdown bar: sits above the RevealJS progress bar, runs right-to-left per slide.
+  // Only shown while auto-advance is on (e.g. not with ?autoSlide=0), so it never
+  // counts down to a slide change that won't happen.
   function resetCountdown() {
     var fill = document.getElementById('slide-countdown-fill');
     fill.style.animation = 'none';
@@ -689,8 +686,19 @@ document.addEventListener('DOMContentLoaded', function () {
     fill.style.animation = '';
   }
 
-  Reveal.on('slidechanged', resetCountdown);
-  Reveal.on('ready', resetCountdown);
+  function startCountdown() {
+    if (!Reveal.getConfig().autoSlide) return;
+    var cdBar = document.createElement('div');
+    cdBar.id = 'slide-countdown';
+    cdBar.innerHTML = '<div id="slide-countdown-fill"></div>';
+    document.querySelector('.reveal').appendChild(cdBar);
+    resetCountdown();
+    Reveal.on('slidechanged', resetCountdown);
+  }
+
+  // Reveal may already be ready by now; if so its 'ready' event has been missed
+  if (Reveal.isReady()) startCountdown();
+  else Reveal.on('ready', startCountdown);
 });
 </script>
 ```
