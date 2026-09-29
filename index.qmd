@@ -218,11 +218,113 @@ The following slides show some examples of what you can do...
 
 ## {#slide-13}
 
-::: {.center-v}
-![](images/show-and-tell.svg){fig-alt="Four stick figures gathered around a table with a laptop"}
-
-### Show & tell — no slides required
-:::
+```{=html}
+<svg class="cartwheels" viewBox="0 0 1600 900" aria-label="Stick figures cartwheeling across the screen in both directions, near and far">
+<g stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<!-- Far layer first so nearer figures draw on top -->
+  <g class="cw-move" style="--x0:1760px; --x1:-160px; --cw:10.47s; --cd:-9.87s">
+    <g transform="translate(0 345) scale(0.45)" stroke="#8B929B">
+      <g class="cw-spin" style="--spin:-1956deg">
+        <circle cx="0" cy="-97" r="22" fill="#1D232B"/>
+        <line x1="0" y1="-75" x2="0" y2="25"/>
+        <polyline points="-75,-110 0,-55 75,-110"/>
+        <polyline points="-62,110 0,25 62,110"/>
+      </g>
+    </g>
+  </g>
+  <g class="cw-move" style="--x0:-160px; --x1:1760px; --cw:10.47s; --cd:-0.30s">
+    <g transform="translate(0 351) scale(0.45)" stroke="#8B929B">
+      <g class="cw-spin" style="--spin:1956deg">
+        <circle cx="0" cy="-97" r="22" fill="#1D232B"/>
+        <line x1="0" y1="-75" x2="0" y2="25"/>
+        <polyline points="-75,-110 0,-55 75,-110"/>
+        <polyline points="-62,110 0,25 62,110"/>
+      </g>
+    </g>
+  </g>
+  <g class="cw-move" style="--x0:1760px; --x1:-160px; --cw:11.35s; --cd:-7.36s">
+    <g transform="translate(0 352) scale(0.45)" stroke="#8B929B">
+      <g class="cw-spin" style="--spin:-1956deg">
+        <circle cx="0" cy="-97" r="22" fill="#1D232B"/>
+        <line x1="0" y1="-75" x2="0" y2="25"/>
+        <polyline points="-75,-110 0,-55 75,-110"/>
+        <polyline points="-62,110 0,25 62,110"/>
+      </g>
+    </g>
+  </g>
+  <g class="cw-move" style="--x0:-160px; --x1:1760px; --cw:10.02s; --cd:-4.70s">
+    <g transform="translate(0 311) scale(0.45)" stroke="#8B929B">
+      <g class="cw-spin" style="--spin:1956deg">
+        <circle cx="0" cy="-97" r="22" fill="#1D232B"/>
+        <line x1="0" y1="-75" x2="0" y2="25"/>
+        <polyline points="-75,-110 0,-55 75,-110"/>
+        <polyline points="-62,110 0,25 62,110"/>
+      </g>
+    </g>
+  </g>
+  <g class="cw-move" style="--x0:-160px; --x1:1760px; --cw:7.12s; --cd:-0.09s">
+    <g transform="translate(0 504) scale(0.7)" stroke="#BCC1C8">
+      <g class="cw-spin" style="--spin:1257deg">
+        <circle cx="0" cy="-97" r="22" fill="#1D232B"/>
+        <line x1="0" y1="-75" x2="0" y2="25"/>
+        <polyline points="-75,-110 0,-55 75,-110"/>
+        <polyline points="-62,110 0,25 62,110"/>
+      </g>
+    </g>
+  </g>
+  <g class="cw-move" style="--x0:1760px; --x1:-160px; --cw:7.89s; --cd:-7.23s">
+    <g transform="translate(0 489) scale(0.7)" stroke="#BCC1C8">
+      <g class="cw-spin" style="--spin:-1257deg">
+        <circle cx="0" cy="-97" r="22" fill="#1D232B"/>
+        <line x1="0" y1="-75" x2="0" y2="25"/>
+        <polyline points="-75,-110 0,-55 75,-110"/>
+        <polyline points="-62,110 0,25 62,110"/>
+      </g>
+    </g>
+  </g>
+  <g class="cw-move" style="--x0:-160px; --x1:1760px; --cw:6.69s; --cd:-5.33s">
+    <g transform="translate(0 483) scale(0.7)" stroke="#BCC1C8">
+      <g class="cw-spin" style="--spin:1257deg">
+        <circle cx="0" cy="-97" r="22" fill="#1D232B"/>
+        <line x1="0" y1="-75" x2="0" y2="25"/>
+        <polyline points="-75,-110 0,-55 75,-110"/>
+        <polyline points="-62,110 0,25 62,110"/>
+      </g>
+    </g>
+  </g>
+  <g class="cw-move" style="--x0:-160px; --x1:1760px; --cw:4.88s; --cd:-0.01s">
+    <g transform="translate(0 681) scale(1.0)" stroke="#F2F4F6">
+      <g class="cw-spin" style="--spin:880deg">
+        <circle cx="0" cy="-97" r="22" fill="#1D232B"/>
+        <line x1="0" y1="-75" x2="0" y2="25"/>
+        <polyline points="-75,-110 0,-55 75,-110"/>
+        <polyline points="-62,110 0,25 62,110"/>
+      </g>
+    </g>
+  </g>
+  <g class="cw-move" style="--x0:1760px; --x1:-160px; --cw:4.55s; --cd:-0.98s">
+    <g transform="translate(0 685) scale(1.0)" stroke="#F2F4F6">
+      <g class="cw-spin" style="--spin:-880deg">
+        <circle cx="0" cy="-97" r="22" fill="#1D232B"/>
+        <line x1="0" y1="-75" x2="0" y2="25"/>
+        <polyline points="-75,-110 0,-55 75,-110"/>
+        <polyline points="-62,110 0,25 62,110"/>
+      </g>
+    </g>
+  </g>
+  <g class="cw-move" style="--x0:-160px; --x1:1760px; --cw:4.41s; --cd:-1.28s">
+    <g transform="translate(0 719) scale(1.0)" stroke="#F2F4F6">
+      <g class="cw-spin" style="--spin:880deg">
+        <circle cx="0" cy="-97" r="22" fill="#1D232B"/>
+        <line x1="0" y1="-75" x2="0" y2="25"/>
+        <polyline points="-75,-110 0,-55 75,-110"/>
+        <polyline points="-62,110 0,25 62,110"/>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>
+```
 
 
 ## {#slide-14}
@@ -293,8 +395,8 @@ The following slides show some examples of what you can do...
 ```{=html}
 <canvas class="grow-network"></canvas>
 <div class="closing-copy">
-  <p class="statement a-rise" style="--d:7s">Thanks for contributing.</p>
-  <p class="statement-sub hl a-rise" style="--d:9.5s">Wishing you all the best on your last mile.</p>
+  <p class="statement a-rise" style="--d:7s">Thanks for sharing.</p>
+  <p class="statement-sub hl a-rise" style="--d:9.5s">Wishing you all the best on your presentation.</p>
 </div>
 ```
 

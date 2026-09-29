@@ -571,6 +571,39 @@ $body-bg: #1D232B;
   to   { transform: rotate(0deg); }
 }
 
+/* Slide 13: cartwheels. Each figure crosses from --x0 to --x1 while spinning by
+   --spin, both over --cw, so it rolls like a wheel. Negative delays (--cd) put
+   everyone mid-trip when the slide opens. */
+.reveal svg.cartwheels {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.reveal .cartwheels .cw-spin {
+  transform-box: view-box;
+  transform-origin: 0 0;  /* the figure's centre, in its own coordinates */
+}
+
+.reveal .slides section.present .cartwheels .cw-move {
+  animation: cw-move var(--cw) linear var(--cd) infinite both;
+}
+
+.reveal .slides section.present .cartwheels .cw-spin {
+  animation: cw-spin var(--cw) linear var(--cd) infinite both;
+}
+
+@keyframes cw-move {
+  from { transform: translateX(var(--x0)); }
+  to   { transform: translateX(var(--x1)); }
+}
+
+@keyframes cw-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(var(--spin)); }
+}
+
 /* Milling about: each person sways by (--dx, --dy) and back on their own slow
    loop --dp, starting partway through (negative delay --dd) so nobody starts in step. */
 .reveal .slides section.present .clappers .drift {
