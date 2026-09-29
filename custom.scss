@@ -229,6 +229,14 @@ $body-bg: #1D232B;
   bottom: 16px;
 }
 
+/* Slides with data-state="no-bars" (title, applause) don't auto-advance, so hide
+   both bars there. Reveal puts the current slide's state on .reveal-viewport.
+   !important because Reveal shows the progress bar with an inline display style. */
+.reveal-viewport.no-bars .reveal .progress,
+.reveal-viewport.no-bars #slide-countdown {
+  display: none !important;
+}
+
 #slide-countdown-fill {
   position: absolute;
   top: 0;

@@ -17,10 +17,15 @@ format:
     height: 900
     chalkboard: false
     include-after-body: animations.html
+title-slide-attributes:
+  data-autoslide: "0"
+  data-state: no-bars
 ---
 
 ::: {#title-howto .howto}
 **Edit me:** set `title`, `subtitle`, and `author` at the top of `index.qmd`. Delete this `.howto` box when you're done.
+
+Note that this slide does not automatically advance... you need to manually advance to the next slide. Subsequent slides will automatically advance.
 :::
 
 ## {#slide-01 background-image="images/pexels-matthew-montrone-230847-2395812.jpg" background-size="cover" background-position="center"}
@@ -116,7 +121,10 @@ You can add SVG graphics for line art, like the one below, by referencing an SVG
 ## {#slide-10}
 
 ::: {.center-v}
-### **Getting creative**
+<!-- Raw <h3>, not ###: a heading first in a div becomes its own nested slide (#/getting-creative) -->
+```{=html}
+<h3><strong>Getting creative</strong></h3>
+```
 
 If you have access to an AI assistant, you can point it at the source code for this presentation and ask it to modify slides.
 
@@ -401,7 +409,7 @@ The following slides show some examples of what you can do...
 ```
 
 
-## {#slide-applause}
+## {#slide-applause data-autoslide="0" data-state="no-bars"}
 
 ```{=html}
 <div class="center-v">
